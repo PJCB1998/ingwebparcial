@@ -1,0 +1,67 @@
+.candidateCard {
+border-width: 5px;
+border-color: black;
+border-radius: 25px;
+}
+.candidateCard:hover {
+    border-color:greenyellow;
+    }
+
+body{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.mainTitle{
+    font-size: 100px;
+}
+
+.statBtn{
+    font-size: xx-large;
+    background-color: green;
+    color: white;
+    border-width: 5px;
+    border-color: transparent;
+}
+.statBtn:hover{
+    color:white;
+    border-width: 5px;
+    border-color: greenyellow;
+    background-color: rgb(0, 70, 0);
+}
+
+.clearBtn{
+    font-size: xx-large;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    border-width: 5px;
+    border-color: transparent;
+}
+.clearBtn:hover{
+    color:white;
+    border-width: 5px;
+    border-color: orange;
+    background-color: rgb(70, 0, 0);
+}
+
+.voteBtn{
+    background-color: transparent;
+    color: black;
+    font-size: 50px;
+}
+
+
+.winner{
+
+    background-color: green;
+    color:white;
+}
+
+.looser{
+    background-color: red;
+    color:white;
+
+}
+.looser:hover{
+    border-color: orange;
+
+}

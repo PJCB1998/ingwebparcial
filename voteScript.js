@@ -38,14 +38,14 @@ function countC1(){
     if (edad == "18-34"){
         edad1C1 = edad1C1+1;
     }
-    if (edad == "35-55"){
+    if (edad == "35-54"){
         edad2C1 = edad2C1+1;
     }
     if (edad == "55 o Mas"){
         edad3C1 = edad3C1+1;
     }
 
-    if (medio == "Television"){
+    if (medio == "TV"){
         medioTC1= medioTC1+1;
     }
     if (medio == "Radio"){
@@ -85,21 +85,21 @@ function countC2(){
     if (edad == "18-34"){
         edad1C2 = edad1C2+1;
     }
-    if (edad == "35-55"){
+    if (edad == "35-54"){
         edad2C2 = edad2C2+1;
     }
     if (edad == "55 o Mas"){
         edad3C2 = edad3C2+1;
     }
 
-    if (medio == "Television"){
-        medioTC1= medioTC2+1;
+    if (medio == "TV"){
+        medioTC2= medioTC2+1;
     }
     if (medio == "Radio"){
-        medioRC1= medioRC2+1;
+        medioRC2= medioRC2+1;
     }
     if (medio == "Internet"){
-        medioIC1 = medioIC1+1;
+        medioIC2 = medioIC2+1;
     }
 
     if (genero == "Masculino"){
@@ -124,12 +124,65 @@ function porcentajes(){
     pC1 = Math.round(pC1);
     pC2 = Math.round(pC2);
 
+    
+
     document.getElementById("porcentajeC1").innerHTML = pC1 + "%";
     document.getElementById("porcentajeC2").innerHTML = pC2 + "%";
+
+    if (pC1>pC2){
+        document.getElementById("c1").classList.add("winner");
+        document.getElementById("c1").classList.remove("looser");
+        document.getElementById("c2").classList.add("looser");
+        document.getElementById("c1Btn").style.color="white";
+        document.getElementById("c2Btn").style.color="white";
+
+        
+    }
+
+    if (pC2>pC1){
+        document.getElementById("c2").classList.add("winner");
+        document.getElementById("c2").classList.remove("looser");
+        document.getElementById("c1").classList.add("looser");
+        document.getElementById("c1Btn").style.color="white";
+        document.getElementById("c2Btn").style.color="white";
+    }
+
+    if (pC2==pC1){
+        document.getElementById("c1").classList.remove("winner");
+        document.getElementById("c1").classList.remove("looser");
+        document.getElementById("c2").classList.remove("winner");
+        document.getElementById("c2").classList.remove("looser");
+        document.getElementById("c1Btn").style.color="black";
+        document.getElementById("c2Btn").style.color="black";
+
+        
+    }
+
 
 }
 
 function stats(){
+
     document.getElementById("vH1").innerHTML= "Votos Hombres: " + generoMC1;
     document.getElementById("vM1").innerHTML= "Votos Mujeres: " + generoFC1;
+
+    document.getElementById("vE11").innerHTML= "Votos 18-35: " + edad1C1;
+    document.getElementById("vE21").innerHTML= "Votos 35-54: " + edad2C1;
+    document.getElementById("vE31").innerHTML= "Votos 55 o Mas: " + edad3C1;
+
+    document.getElementById("vT1").innerHTML= "Votos TV: " + medioTC1;
+    document.getElementById("vI1").innerHTML= "Votos Internet: " + medioIC1;
+    document.getElementById("vR1").innerHTML= "Votos Radio: " + medioRC1;
+
+
+    document.getElementById("vH2").innerHTML= "Votos Hombres: " + generoMC2;
+    document.getElementById("vM2").innerHTML= "Votos Mujeres: " + generoFC2;
+
+    document.getElementById("vE12").innerHTML= "Votos 18-35: " + edad1C2;
+    document.getElementById("vE22").innerHTML= "Votos 35-54: " + edad2C2;
+    document.getElementById("vE32").innerHTML= "Votos 55 o Mas: " + edad3C2;
+
+    document.getElementById("vT2").innerHTML= "Votos TV: " + medioTC2;
+    document.getElementById("vI2").innerHTML= "Votos Internet: " + medioIC2;
+    document.getElementById("vR2").innerHTML= "Votos Radio: " + medioRC2;
 }
